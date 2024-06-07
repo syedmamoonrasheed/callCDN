@@ -178,8 +178,8 @@ function injectStyles() {
             margin-bottom: 3px;
         }
 
-        p{
-        front-size:20px;
+        .para{
+        font-size: 25px;
         }
 
         .block-user {
@@ -225,12 +225,11 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
-        <p>Hello! this is Emma</p>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeblandCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeblandCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <p class="para">Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
-                <label for="phone_number">Phone Number</label>
                 <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Enter phone number" required>
             </div><br>
             <button type="submit" class="btn">
