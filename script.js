@@ -165,17 +165,16 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             border: 2px solid white;
             margin-bottom: 10px;
         }
 
         .veta_logo {
-            width: 100px;
+            width: 170px;
             height: auto;
-            margin-bottom: 10px;
         }
 
         .block-user {
@@ -217,14 +216,14 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_3@main/veta_logo.png" alt="Veta Logo" class="veta_logo">
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_3@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_4@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_4@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
                 <label for="phone_number">Phone Number</label>
                 <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Enter phone number" required>
-            </div>
+            </div><br>
             <button type="submit" class="btn">
                 <i class="fas fa-phone"></i> Call
             </button>
