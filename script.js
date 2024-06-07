@@ -165,18 +165,17 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 110px;
-            height: 110px;
+            width: 125px;
+            height: 125px;
             border-radius: 50%;
             border: 2px solid white;
             margin-bottom: 3px;
         }
 
         .veta_logo {
-            width: 150px;
+            width: 145px;
             height: auto;
-            margin-bottom: 6px;
-            
+            margin-bottom: 3px;
         }
 
         .block-user {
@@ -194,8 +193,8 @@ function injectStyles() {
             background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png");
         }
 
-        .iti__selected-dial-code, .iti__dial-code {
-            color: black; /* Set country code text color to black */
+        .iti__selected-dial-code, .iti__dial-code, .iti__country-name {
+            color: black; /* Set country code and country name text color to black */
         }
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -222,8 +221,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_12@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_12@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
