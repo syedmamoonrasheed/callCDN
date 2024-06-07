@@ -68,7 +68,7 @@ function injectStyles() {
             position: fixed;
             bottom: 100px;
             right: 20px;
-            width: 360px;
+            width: 300px;
             padding: 20px;
             background: linear-gradient(135deg, #c850c0, #4158d0);
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
@@ -169,11 +169,11 @@ function injectStyles() {
             height: 90px;
             border-radius: 50%;
             border: 2px solid white;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .veta_logo {
-            width: 170px;
+            width: 150px;
             height: auto;
         }
 
@@ -216,8 +216,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_4@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_4@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_5@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_5@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
