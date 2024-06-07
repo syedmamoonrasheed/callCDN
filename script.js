@@ -165,8 +165,8 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 125px;
-            height: 125px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 2px solid white;
             margin-bottom: 3px;
@@ -176,6 +176,10 @@ function injectStyles() {
             width: 145px;
             height: auto;
             margin-bottom: 3px;
+        }
+
+        p{
+        front-size:20px;
         }
 
         .block-user {
@@ -221,8 +225,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
