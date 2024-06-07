@@ -216,8 +216,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_10@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_10@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_11@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_11@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -261,7 +261,7 @@ function makeCall() {
         data: JSON.stringify({ phone_number: phoneNumber }),
         success: (response) => {
             button.classList.remove('animate-call');
-            showFlashMessage('Call successfully initiated!', 'success');
+            showFlashMessage(response.message, 'success');
         },
         error: (xhr, status, error) => {
             button.classList.remove('animate-call');
