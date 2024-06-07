@@ -1,5 +1,5 @@
 // Load external CSS and JS dependencies
-function loadDependencies() {
+function loadDependencies(callback) {
     const cssLinks = [
         'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
@@ -9,6 +9,8 @@ function loadDependencies() {
         'https://code.jquery.com/jquery-3.5.1.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js'
     ];
+
+    let loadedScripts = 0;
 
     cssLinks.forEach(link => {
         const linkElement = document.createElement('link');
@@ -20,7 +22,12 @@ function loadDependencies() {
     jsLinks.forEach(link => {
         const scriptElement = document.createElement('script');
         scriptElement.src = link;
-        scriptElement.defer = true;
+        scriptElement.onload = () => {
+            loadedScripts++;
+            if (loadedScripts === jsLinks.length) {
+                callback();
+            }
+        };
         document.head.appendChild(scriptElement);
     });
 }
@@ -203,7 +210,7 @@ function injectHTML() {
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
         <h2>Incoming Call</h2>
-        <img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test@main/profile_picture.jpg" alt="Profile Picture" class="profile-picture">
         <p>Jamie</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -245,7 +252,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'http://3.82.61.35:83/make_call',
+        url: '/make_call',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
@@ -272,10 +279,9 @@ function initializeIntlTelInput() {
 
 // Initialize everything
 function initialize() {
-    loadDependencies();
     injectStyles();
     injectHTML();
-    document.addEventListener('DOMContentLoaded', initializeIntlTelInput);
+    loadDependencies(initializeIntlTelInput);
 }
 
 // Run the initialization
