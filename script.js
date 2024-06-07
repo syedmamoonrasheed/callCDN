@@ -216,8 +216,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_8@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_8@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_9@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_9@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -263,8 +263,9 @@ function makeCall() {
             button.classList.remove('animate-call');
             showFlashMessage('Call successfully initiated!', 'success');
         },
-        error: () => {
+        error: (xhr, status, error) => {
             button.classList.remove('animate-call');
+            console.error(xhr.responseText); // Log the error message to the console
             showFlashMessage('An error occurred. Please try again.', 'danger');
         }
     });
