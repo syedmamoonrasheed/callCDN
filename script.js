@@ -165,16 +165,18 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 90px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             border: 2px solid white;
-            margin-bottom: 6px;
+            margin-bottom: 3px;
         }
 
         .veta_logo {
             width: 150px;
             height: auto;
+            margin-bottom: 6px;
+            
         }
 
         .block-user {
@@ -190,6 +192,10 @@ function injectStyles() {
 
         .iti__flag {
             background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png");
+        }
+
+        .iti__selected-dial-code, .iti__dial-code {
+            color: black; /* Set country code text color to black */
         }
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -216,9 +222,9 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_11@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_11@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
-        <p>Emma</p>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_12@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_12@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <p>Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
                 <label for="phone_number">Phone Number</label>
@@ -255,7 +261,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'http://localhost:5003/make_call', // Adjust the URL to match your Flask server
+        url: 'http://3.82.61.35:83/make_call', // Adjust the URL to match your Flask server
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
