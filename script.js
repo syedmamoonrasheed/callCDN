@@ -44,7 +44,7 @@ function injectStyles() {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007bff;
+            background-color: #761fe3;
             color: white;
             border-radius: 50%;
             width: 60px;
@@ -108,28 +108,30 @@ function injectStyles() {
             border: 1px solid #ddd;
             transition: border-color 0.3s, box-shadow 0.3s;
             width: 100%;
+            color: black;
         }
 
         #call-popup input:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            border-color: #761fe3;
+            box-shadow: 0 0 5px rgba(118, 31, 227, 0.5);
         }
 
         #call-popup button {
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            background-color: #28a745;
+            background-color: #761fe3;
             color: white;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
             display: flex;
             align-items: center;
             font-size: 18px;
         }
 
         #call-popup button:hover {
-            background-color: #218838;
+            background-color: white;
+            color: #761fe3;
             transform: scale(1.05);
         }
 
