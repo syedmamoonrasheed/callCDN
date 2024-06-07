@@ -211,8 +211,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <h2>Incoming Call</h2>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test@main/profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+         <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_2@main/veta_logo.png" alt="Profile Picture" class="profile-picture"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_2@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p>Jamie</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -223,11 +223,6 @@ function injectHTML() {
                 <i class="fas fa-phone"></i> Call
             </button>
         </form>
-        <div id="alert-container" class="alert-container"></div>
-        <div class="block-user">
-            <input type="checkbox" id="block_user">
-            <label for="block_user">Block user</label>
-        </div>
     `;
     document.body.appendChild(callPopup);
 }
