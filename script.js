@@ -68,7 +68,7 @@ function injectStyles() {
             position: fixed;
             bottom: 100px;
             right: 20px;
-            width: 320px;
+            width: 360px;
             padding: 20px;
             background: linear-gradient(135deg, #c850c0, #4158d0);
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
@@ -172,6 +172,12 @@ function injectStyles() {
             margin-bottom: 10px;
         }
 
+        .veta_logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         .block-user {
             display: flex;
             align-items: center;
@@ -211,9 +217,9 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-         <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_2@main/veta_logo.png" alt="Profile Picture" class="profile-picture"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_2@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
-        <p>Jamie</p>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_3@main/veta_logo.png" alt="Veta Logo" class="veta_logo">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/test_3@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <p>Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
                 <label for="phone_number">Phone Number</label>
@@ -223,6 +229,7 @@ function injectHTML() {
                 <i class="fas fa-phone"></i> Call
             </button>
         </form>
+        <div id="alert-container" class="alert-container"></div>
     `;
     document.body.appendChild(callPopup);
 }
