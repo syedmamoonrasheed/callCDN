@@ -35,10 +35,6 @@ function loadDependencies(callback) {
 // Inject CSS styles
 function injectStyles() {
     const styles = `
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-        }
 
         #call-icon {
             position: fixed;
@@ -179,7 +175,7 @@ function injectStyles() {
         }
 
         .para{
-        font-size: 25px;
+        font-size: 20px;
         }
 
         .block-user {
@@ -225,8 +221,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeblandCDN@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/callcodeblandCDN@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p class="para">Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -263,7 +259,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'http://3.82.61.35:83/make_call', // Adjust the URL to match your Flask server
+        url: 'https://suneel.pythonanywhere.com/make_call', // Adjust the URL to match your Flask server
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
