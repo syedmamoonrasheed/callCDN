@@ -221,8 +221,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling_1@main/veta_logo.png" alt="Veta Logo" class="veta_logo"><br>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling_1@main/profile.jpeg" alt="Profile Picture" class="profile-picture">
         <p class="para">Hello! this is Emma</p>
         <form onsubmit="event.preventDefault(); makeCall();">
             <div class="form-group">
@@ -259,7 +259,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'https://suneel.pythonanywhere.com/make_call', // Adjust the URL to match your Flask server
+        url: 'https://b04c-223-123-106-59.ngrok-free.app/make_call', // Adjust the URL to match your Flask server
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
